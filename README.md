@@ -1,6 +1,6 @@
 # dcFBA
 Supporting information to the manuscript "Optimizing Fed-Batch Processes with
-Dynamic Control Flux Balance Analysis".
+Dynamic Control Flux Balance Analysis" currently in submission.
 
 ## Files
 * ``00_files`` contains the metabolic model as well as some pre and postprocessing scripts used in the simulations.
