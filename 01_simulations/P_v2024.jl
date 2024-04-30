@@ -153,7 +153,7 @@ function fed_batch_dFBA(N0,V0,nFE,S,t_max,t_min,V_max,c_G,glu,atp,so4,xxx,pro,vl
             NLc_slack_lb_A[mc=1:nA,i=1:nFE], slack_lb_A[mc,i]  == (q[A_idx[mc],i] -vlb[A_idx[mc]])*alpha_lb_A[mc,i]/nA*phi2
             NLc_slack_ub_A[mc=1:nA,i=1:nFE], slack_ub_A[mc,i]  == (q[A_idx[mc],i] -vub[A_idx[mc]])*alpha_ub_A[mc,i]/nA*phi2
             NLc_slack_lb_B[mc=1:nB,i=1:nFE], slack_lb_B[mc,i]  == (q[B_idx[mc],i] -vlb[B_idx[mc]])*alpha_lb_B[mc,i]/nB*phi2
-            NLc_slack_ub_C[mc=1:nC,i=1:nFE], slack_ub_C[mc,i]  == (q[C_idx[mc],i] -vlb[C_idx[mc]])*alpha_ub_C[mc,i]/nC*phi2
+            NLc_slack_ub_C[mc=1:nC,i=1:nFE], slack_ub_C[mc,i]  == (q[C_idx[mc],i] -vub[C_idx[mc]])*alpha_ub_C[mc,i]/nC*phi2
 
             # INTEGRATION BY COLLOCATION
             # set up collocation equations - 2nd-to-nth point
