@@ -2,7 +2,6 @@ using JuMP
 using LinearAlgebra
 using Ipopt
 using DelimitedFiles
-using TickTock
 using JLD2
 import DataFrames
 import CSV
@@ -245,11 +244,9 @@ function fed_batch_dFBA(N0,V0,nFE,S,t_max,t_min,V_max,c_G,glu,atp,so4,xxx,pro,vl
     # MODEL OPTIMIZATION
     
     println("Model Preprocessing Finished.")
-    tick()
     solveNLP = JuMP.optimize!
     status = solveNLP(m)
-    t = tok()
-    #tock()
+    t = solve_time(m)
     println("Model Finished Optimization")
 
     # Read out model parameters
@@ -332,7 +329,7 @@ function run_kkt_simulation()
     # KKT FBA objective function: optimize product
     nR = size(S,2)
     d  = 0.0*Vector{Float64}(undef,nR) 
-    d[pro] = -1
+    d[xxx] = -1
 
     N_, Ndot_, V_, Vdot_, q_, tFE_, sum_slack, m_, t_ = fed_batch_dFBA(N0,V0,nFE,S,t_max,t_min,V_max,c_G,glu,atp,so4,xxx,pro,vlb,vub,d)
     println("DONE")
