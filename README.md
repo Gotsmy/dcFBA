@@ -1,6 +1,6 @@
 # Optimizing Fed-Batch Processes with Dynamic Control Flux Balance Analysis
 Supporting information to the manuscript "Optimizing Fed-Batch Processes with
-Dynamic Control Flux Balance Analysis" available on [bioRxiv](https://doi.org/10.1101/2024.06.11.598442).
+Dynamic Control Flux Balance Analysis" available on [IFAC-PapersOnline](https://doi.org/10.1016/j.ifacol.2024.10.019).
 
 ## Folders
 * ``00_files`` contains the metabolic model as well as some pre and postprocessing scripts used in the simulations.
